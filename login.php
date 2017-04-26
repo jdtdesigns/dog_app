@@ -1,6 +1,10 @@
 <?php 
 	$page_title = 'Login';
 	$error = false;
+	session_start();
+
+	// If logged in, redirect to dashboard
+	if ( $_SESSION['username'] ) header('Location: index.php');
 
 	// If login form submitted, try login
 	if ( isset($_POST['login']) ) {
