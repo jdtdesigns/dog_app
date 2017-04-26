@@ -3,7 +3,7 @@
 	$page_title = 'Dashboard';
 	session_start();
 	
-	// Check if user is logged in
+	// Check if user is logged in. If not, redirect to login
 	$user_logged_in = file_exists('users/' . $_SESSION['username'] . '.xml');
 	if ( !$user_logged_in ) header('Location: login.php');
 
@@ -12,6 +12,7 @@
 	$path = 'dog_data/dogs.xml';
 	$xml = simplexml_load_file($path);
 
+	// Push all dogs into $dogs array and reverse
 	foreach ( $xml->dogs->dog as $dog ) $dogs[] = $dog;
 	$dogs = array_reverse($dogs);
 ?>
@@ -40,7 +41,8 @@
 	      <td>No Dogs Have Been Added</td>
 	    </tr>
 	  <?php endif; ?>
-
+		
+		<?php // Loop through all dogs and create table row for each ?>
 		<?php foreach ( $dogs as $dog ) : ?>
 	    <tr>
 	      <td><?php echo (string)$dog->name; ?></td>

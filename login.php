@@ -2,25 +2,33 @@
 	$page_title = 'Login';
 	$error = false;
 
+	// If login form submitted, try login
 	if ( isset($_POST['login']) ) {
 
+		// Secure input values
 		$username = preg_replace('/[^A-Za-z]/', '', $_POST['username']);
 		$password = htmlspecialchars($_POST['password']);
 
+		// If user file exists, fire log in
 		if ( file_exists('users/' . $username . '.xml') ) {
-
+			
+			// Set user file path
 			$path = 'users/' . $username . '.xml';
-
+			
+			// Get user file
 			$xml = new SimpleXMLElement($path, 0, true);
 			
-
+			// Verify password
 			if ( password_verify($password, $xml->password) ) {
-				echo 'yep';
 				session_start();
+				// Save username to session for route binding and dashboard use
 				$_SESSION['username'] = $username;
+				// Redirect to dashboard
 				header('Location: index.php');
+				// Stop code processing and exit
 				die;
 
+				// If any input errors, show error
 			} else $error = true;
 		}
 	}
@@ -35,7 +43,8 @@
 		<form id="login" method="post">
 
 			<h1 class="title is-3 has-text-centered">Login</h1>
-
+			
+			<?php // Show error ?>
 			<?php if ($error) : ?>
 				<p class="error">Invalid Credentials</p>
 			<?php endif; ?>			
