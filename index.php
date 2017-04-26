@@ -35,7 +35,8 @@
     </tr>
   </thead>
   <tbody>
-
+		
+		<?php // If no dogs are in data, show this message ?>
   	<?php if ( !count($dogs) ) : ?>
   		<tr colspan="4">
 	      <td>No Dogs Have Been Added</td>
