@@ -4,7 +4,7 @@
 	$errors = [];
 
 	// If logged in, redirect to dashboard
-	if ( $_SESSION['username'] ) header('Location: index.php');
+	if ( isset($_SESSION['username']) ) header('Location: index.php');
 
 	// If register form submitted, try register
 	if ( isset($_POST['register'] ) ) {

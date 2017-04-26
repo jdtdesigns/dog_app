@@ -3,6 +3,9 @@
 	session_start();
 	$error = false;
 
+	// If not logged in, redirect to login
+	if ( !isset($_SESSION['username']) ) header('Location: login.php');
+
 	// If add form submitted, add a dog to data
 	if ( isset($_POST['add'] ) ) {
 
