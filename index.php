@@ -12,10 +12,8 @@
 	$path = 'dog_data/dogs.xml';
 	$xml = simplexml_load_file($path);
 
-	foreach ( $xml->dogs->dog as $dog ) {
-		$dogs[] = $dog;
-	}
-
+	foreach ( $xml->dogs->dog as $dog ) $dogs[] = $dog;
+	
 ?>
 
 <?php include_once 'header.php'; ?>
