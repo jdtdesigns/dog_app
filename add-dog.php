@@ -5,10 +5,10 @@
 
 	if ( isset($_POST['add'] ) ) {
 
-		$name = $_POST['name'];
-		$weight = $_POST['weight'];
-		$color = $_POST['color'];
-		$breed = $_POST['breed'];
+		$name = htmlspecialchars($_POST['name']);
+		$weight = htmlspecialchars($_POST['weight']);
+		$color = htmlspecialchars($_POST['color']);
+		$breed = htmlspecialchars($_POST['breed']);
 
 		if ( !$name || !$weight || !$color || !$breed ) $error =  true;
 

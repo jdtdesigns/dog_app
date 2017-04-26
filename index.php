@@ -13,7 +13,7 @@
 	$xml = simplexml_load_file($path);
 
 	foreach ( $xml->dogs->dog as $dog ) $dogs[] = $dog;
-	
+	$dogs = array_reverse($dogs);
 ?>
 
 <?php include_once 'header.php'; ?>

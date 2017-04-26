@@ -5,7 +5,7 @@
 	if ( isset($_POST['login']) ) {
 
 		$username = preg_replace('/[^A-Za-z]/', '', $_POST['username']);
-		$password = $_POST['password'];
+		$password = htmlspecialchars($_POST['password']);
 
 		if ( file_exists('users/' . $username . '.xml') ) {
 
