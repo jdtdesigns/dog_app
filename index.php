@@ -4,8 +4,7 @@
 	session_start();
 	
 	// Check if user is logged in. If not, redirect to login
-	$user_logged_in = file_exists('users/' . $_SESSION['username'] . '.xml');
-	if ( !$user_logged_in ) header('Location: login.php');
+	if ( !isset($_SESSION['username']) ) header('Location: /login.php');
 
 	// Load dogs file and get all data from file 
 	$path = 'dog_data/dogs.xml';

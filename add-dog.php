@@ -4,7 +4,7 @@
 	$error = false;
 
 	// If not logged in, redirect to login
-	if ( !isset($_SESSION['username']) ) header('Location: login.php');
+	if ( !isset($_SESSION['username']) ) header('Location: /login.php');
 
 	// If add form submitted, add a dog to data
 	if ( isset($_POST['add'] ) ) {
@@ -35,7 +35,7 @@
 			$xml->asXML($path);
 
 			// Redirect to dashboard
-			header('Location: index.php');
+			header('Location: /index.php');
 		}
 
 	}

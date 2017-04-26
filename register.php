@@ -4,7 +4,7 @@
 	$errors = [];
 
 	// If logged in, redirect to dashboard
-	if ( isset($_SESSION['username']) ) header('Location: index.php');
+	if ( isset($_SESSION['username']) ) header('Location: /index.php');
 
 	// If register form submitted, try register
 	if ( isset($_POST['register'] ) ) {
@@ -37,7 +37,7 @@
 
 			// Save username to session for route binding and dashboard use
 			$_SESSION['username'] = $username;
-			header('Location: index.php');
+			header('Location: /index.php');
 
 		}
 
