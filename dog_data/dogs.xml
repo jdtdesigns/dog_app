@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<data>
+	<dogs><dog><name>Daisy</name><weight>80</weight><color>black</color><breed>lab</breed></dog><dog><name>Duke</name><weight>30</weight><color>white</color><breed>mutt</breed></dog></dogs>
+</data>
