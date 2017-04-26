@@ -8,11 +8,11 @@
 	if ( !$user_logged_in ) header('Location: login.php');
 
 	// Load dogs file and get all data from file 
-	$dogs = [];
 	$path = 'dog_data/dogs.xml';
 	$xml = simplexml_load_file($path);
 
 	// Push all dogs into $dogs array and reverse
+	$dogs = [];
 	foreach ( $xml->dogs->dog as $dog ) $dogs[] = $dog;
 	$dogs = array_reverse($dogs);
 ?>
