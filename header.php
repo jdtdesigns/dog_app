@@ -34,7 +34,7 @@
     			 		<?php endif; ?>
 
 	    				<div class="drop">
-                            <?php // Echo the username stored in the store and add a logout button ?>
+                            <?php // Echo the username stored in the session and add a logout button ?>
 	    					<span class="title is-6">Welcome, <?php echo $_SESSION['username']; ?></span>
 	    					<nav>
 	    						<a href="/logout.php" class="button is-dark">Logout</a>
