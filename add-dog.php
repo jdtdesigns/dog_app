@@ -48,7 +48,7 @@
 			  <p class="control has-icons-left">
 			    <input class="input" type="text" placeholder="Name" name="name">
 			    <span class="icon is-small is-left">
-			      <i class="fa fa-envelope"></i>
+			      <i class="fa fa-square-o"></i>
 			    </span>
 			  </p>
 			</div>
@@ -57,7 +57,7 @@
 			  <p class="control has-icons-left">
 			    <input class="input" type="text" placeholder="Weight" name="weight">
 			    <span class="icon is-small is-left">
-			      <i class="fa fa-lock"></i>
+			      <i class="fa fa-square-o"></i>
 			    </span>
 			  </p>
 			</div>
@@ -66,7 +66,7 @@
 			  <p class="control has-icons-left">
 			    <input class="input" type="text" placeholder="Color" name="color">
 			    <span class="icon is-small is-left">
-			      <i class="fa fa-lock"></i>
+			      <i class="fa fa-square-o"></i>
 			    </span>
 			  </p>
 			</div>
@@ -75,7 +75,7 @@
 			  <p class="control has-icons-left">
 			    <input class="input" type="text" placeholder="Breed" name="breed">
 			    <span class="icon is-small is-left">
-			      <i class="fa fa-lock"></i>
+			      <i class="fa fa-square-o"></i>
 			    </span>
 			  </p>
 			</div>
