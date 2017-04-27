@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php // Make page title dynamic based on variable in each page file ?>
-        <title><?php echo $page_title; ?></title>
+        <title><?= $page_title; ?></title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -35,7 +35,7 @@
 
 	    				<div class="drop">
                             <?php // Echo the username stored in the session and add a logout button ?>
-	    					<span class="title is-6">Welcome, <?php echo $_SESSION['username']; ?></span>
+	    					<span class="title is-6">Welcome, <?= $_SESSION['username']; ?></span>
 	    					<nav>
 	    						<a href="/logout.php" class="button is-dark">Logout</a>
 	    					</nav>

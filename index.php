@@ -45,10 +45,10 @@
 		<?php // Loop through all dogs and create table row for each ?>
 		<?php foreach ( $dogs as $dog ) : ?>
 	    <tr>
-	      <td><?php echo (string)$dog->name; ?></td>
-	      <td><?php echo (string)$dog->weight; ?></td>
-	      <td><?php echo (string)$dog->color; ?></td>
-	      <td><?php echo (string)$dog->breed; ?></td>
+	      <td><?= (string)$dog->name; ?></td>
+	      <td><?= (string)$dog->weight; ?></td>
+	      <td><?= (string)$dog->color; ?></td>
+	      <td><?= (string)$dog->breed; ?></td>
 	    </tr>
   	<?php endforeach; ?>
   </tbody>

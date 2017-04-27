@@ -55,7 +55,7 @@
 			<?php if ( count($errors) ) : ?>
 				<ul>
 					<?php foreach ( $errors as $error ) : ?>
-						<li class="error"><?php echo $error; ?></li>
+						<li class="error"><?= $error; ?></li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>		
